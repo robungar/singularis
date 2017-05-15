@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{{>head}}
+	<!-- Document Title
+	============================================= -->
+	<title>Data Centers | singularis</title>
+</head>
+<body class="stretched">
+
+<div id="wrapper" class="clearfix">
+	<!-- Header
+		============================================= -->
+		<header id="header" class="transparent-header full-header" data-sticky-class="not-dark">
+		{{>nav}}
+
+		</header><!-- #header end -->
+
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+
+			<div class="content-wrap">
+
+				<div class="container clearfix">
+
+					<div class="col_full">
+						<h3>Our Data Center Locations</h3>
+						<div id="vmap2" style="height: 400px;"></div>
+					</div>
+
+				</div>
+
+			</div>
+
+
+		</section><!-- #content end -->
+
+		<section>
+			<div class="section nomargin notopborder" style="padding: 80px 0 60px; background: url(images/supernap-gallery16.jpg) center center no-repeat; background-size: cover">
+				<div class="container center clearfix">
+
+					<div class="heading-block">
+						<h2 style="color: white;">Corporate offices &amp; data centers</h2>
+						<span style="color: white;">Singularis IT is equipped to handle a wide range of IT support and solutions. We have two data centers located in Ashburn, VA and Chicago, IL. Both data centers carry the highest SLA’s, and SSAE 16 audit receiving certification for ISO and LEED.
+						<br />
+						<br />
+						Our state-of-the-art facilities are powered by a dual utility power grid. We take every precaution to ensure biometric security, redundancy in all critical systems, an on-site Network Operations Center (NOC), and a team of qualified engineers available during all hours.</span>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			{{>footer}}
+		</footer>
+
+</div>
+
+<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+
+	<!-- External JavaScripts
+	============================================= -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/plugins.js"></script>
+	<script type="text/javascript" src="js/jquery.vmap.js"></script>
+	<script type="text/javascript" src="js/vmap/jquery.vmap.world.js"></script>
+	<script type="text/javascript" src="js/vmap/jquery.vmap.usa.js"></script>
+	<script type="text/javascript" src="js/vmap/jquery.vmap.europe.js"></script>
+	<script type="text/javascript" src="js/vmap/jquery.vmap.germany.js"></script>
+	<script type="text/javascript" src="js/vmap/jquery.vmap.sampledata.js"></script>
+	<script type="text/javascript" src="https://maps.google.com/maps/api/js"></script>
+	<script type="text/javascript" src="js/jquery.gmap.js"></script>
+
+	<!-- Footer Scripts
+	============================================= -->
+	<script type="text/javascript" src="js/functions.js"></script>
+
+	<script type="text/javascript">
+
+		jQuery(document).ready(function($){
+			
+			$('#vmap2').vectorMap({
+				map: 'usa_en',
+				backgroundColor: null,
+				color: '#27AAE1',
+				hoverOpacity: 0.7,
+				selectedColor: '#27AAE1',
+				enableZoom: true,
+				showTooltip: true,
+				values: sample_data,
+				scaleColors: ['#EEE', '#27AAE1'],
+				normalizeFunction: 'polynomial'
+			});
+
+		});
+
+	</script>
+
+</body>
+</html>
