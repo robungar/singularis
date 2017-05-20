@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 require('dotenv').config()
 
-var DB_URL = 'mongodb://localhost/singularis-non-turbo'
+var DB_URL = 'mongodb://localhost/singularis'
 mongoose.connect(DB_URL, function(err, res){
   if(err){
     console.log('DB CONNECTION FAIL: '+err)
